@@ -13,4 +13,5 @@
  *= require kmaps_engine/application
  *= require shanti_integration/application
  *= require terms_engine/application
+ *= require nod_integration/application
  */

@@ -7,6 +7,14 @@ GIT
       railties (>= 3.2.16)
 
 GIT
+  remote: https://github.com/nod-uoft/nod_integration.git
+  revision: fbb93fd6f3c16e1a24b435b86b99c7fece8fa154
+  tag: v0.1.0
+  specs:
+    nod_integration (0.1.0)
+      rails
+
+GIT
   remote: https://github.com/rails/actionpack-action_caching.git
   revision: 05c821ec84eb79760e95b0a57ae72919eefb0257
   specs:
@@ -92,10 +100,10 @@ GIT
 
 GIT
   remote: https://github.com/shanti-uva/shanti_integration.git
-  revision: 2c443f408896374cae34048ca60c22e3dace77d6
-  tag: v3.6.9
+  revision: 2078893694fb147cccf32d6b338914ffec89f7de
+  tag: v3.7.0
   specs:
-    shanti_integration (3.6.9)
+    shanti_integration (3.7.0)
       rails
 
 GIT
@@ -115,6 +123,14 @@ GIT
     terms_engine (2.1.1)
       ruby-openai
       sprockets-rails
+
+GIT
+  remote: https://github.com/shanti-uva/terms_integration.git
+  revision: 8a4199a4108ece7c733e5df585e0f9f6ee2b33eb
+  tag: v0.1.0
+  specs:
+    terms_integration (0.1.0)
+      rails
 
 GIT
   remote: https://github.com/thl/active_resource_extensions.git
@@ -171,10 +187,10 @@ GIT
 
 GIT
   remote: https://github.com/thl/mms_integration.git
-  revision: 235b60162e1ea564086a6a2be3e06eaa75cf5555
-  tag: v2.4.9
+  revision: 6b6f2d7fbb6d40d83c8b3f381b3ded8d51646496
+  tag: v2.5.0
   specs:
-    mms_integration (2.4.9)
+    mms_integration (2.5.0)
       rails (>= 4.0)
 
 GIT
@@ -569,8 +585,9 @@ DEPENDENCIES
   jquery-rails
   jquery-ui-rails (= 7.0.0)!
   kmaps_engine (= 7.0.8)!
-  mms_integration (= 2.4.9)!
+  mms_integration (= 2.5.0)!
   newrelic_rpm
+  nod_integration (= 0.1.0)!
   pg (= 1.5.9)
   places_integration (= 2.3.1)!
   rack-openid
@@ -581,10 +598,11 @@ DEPENDENCIES
   sass-rails
   selenium-webdriver
   shakapacker (>= 9.5.0)
-  shanti_integration (= 3.6.9)!
+  shanti_integration (= 3.7.0)!
   spawnling
   subjects_integration (= 0.3.8)!
   terms_engine (= 2.1.1)!
+  terms_integration (= 0.1.0)!
   tinymce-rails
   tzinfo-data
   universal_navigation (= 3.1.7)!
