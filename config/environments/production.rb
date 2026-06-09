@@ -56,18 +56,34 @@ Rails.application.configure do
   # Ignore bad email addresses and do not raise email delivery errors.
   # Set this to true and configure the email server for immediate delivery to raise delivery errors.
   # config.action_mailer.raise_delivery_errors = false
+  settings = YAML.load_file(Rails.root.join('config/settings.yml')) || {}
+  server_environment = settings['server.environment'].to_s.strip.downcase
   config.action_mailer.delivery_method = :smtp #:file
-  config.action_mailer.smtp_settings = {
-    address:         "smtp.gmail.com",
-    port:            587,
-    domain:          "contemplative.eco",
-    user_name:       Rails.application.credentials.dig(:smtp, :user_name),
-    password:        Rails.application.credentials.dig(:smtp, :password),
-    authentication:  "plain",
-    enable_starttls: true,
-    open_timeout:    5,
-    read_timeout:    5
-  }
+  if %w[nod-dev nod-prd].include?(server_environment)
+    config.action_mailer.smtp_settings = {
+      address: 'smtp.utm.utoronto.ca',
+      port: 25,
+      domain: 'utm.utoronto.ca',
+      enable_starttls_auto: false,
+      open_timeout: 10,
+      read_timeout: 10
+    }
+    config.action_mailer.default_options = { from: 'no-reply@utm.utoronto.ca' }
+  else
+    # existing Gmail SMTP config
+    config.action_mailer.smtp_settings = {
+      address:         'smtp.gmail.com',
+      port:            587,
+      domain:          'contemplative.eco',
+      user_name:       Rails.application.credentials.dig(:smtp, :user_name),
+      password:        Rails.application.credentials.dig(:smtp, :password),
+      authentication:  'plain',
+      enable_starttls: true,
+      open_timeout:    5,
+      read_timeout:    5
+    }
+    config.action_mailer.default_options = { from: 'no-reply@utm.utoronto.ca' }
+  end
   
   # Set host to be used by links generated in mailer templates.
   config.after_initialize do

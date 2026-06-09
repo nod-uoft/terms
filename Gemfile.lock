@@ -117,10 +117,10 @@ GIT
 
 GIT
   remote: https://github.com/shanti-uva/terms_engine.git
-  revision: 1c16b8f8a2291a05e283cea2facb2b976d85c66f
-  tag: v2.1.1
+  revision: d0367abc0923fb3cf8eae32d19b62ced5ca347a8
+  tag: v2.1.2
   specs:
-    terms_engine (2.1.1)
+    terms_engine (2.1.2)
       ruby-openai
       sprockets-rails
 
@@ -152,10 +152,10 @@ GIT
 
 GIT
   remote: https://github.com/thl/authenticated_system.git
-  revision: 44c07830e473e9e43b15855364a4cd11e9a614fa
-  tag: v2.6.1
+  revision: d3e95c48bd47f97441a8a15db66a009adf06c0d5
+  tag: v2.6.2
   specs:
-    authenticated_system (2.6.1)
+    authenticated_system (2.6.2)
       bcrypt (~> 3.1)
       rails
 
@@ -569,7 +569,7 @@ DEPENDENCIES
   activeresource
   acts_as_family_tree (= 1.3.2)!
   annotate
-  authenticated_system (= 2.6.1)!
+  authenticated_system (= 2.6.2)!
   bootstrap-sass
   capybara
   complex_dates (= 2.4.5)!
@@ -601,7 +601,7 @@ DEPENDENCIES
   shanti_integration (= 3.7.1)!
   spawnling
   subjects_integration (= 0.3.8)!
-  terms_engine (= 2.1.1)!
+  terms_engine (= 2.1.2)!
   terms_integration (= 0.1.0)!
   tinymce-rails
   tzinfo-data
