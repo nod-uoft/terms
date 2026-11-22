@@ -69,7 +69,7 @@ gem 'nod_integration',            '0.1.4',        github: 'nod-uoft/nod_integrat
 #gem 'topical_map_integration',    '3.1.1',        github: 'thl/topical_map_integration',     tag: 'v3.1.1' #path: '../../thl/engines/topical_map_integration'
 #gem 'topical_map_to_kmaps',       '0.1.1',        github: 'shanti-uva/topical_map_to_kmaps', tag: 'v0.1.1' #path: '../../shanti/engines/topical_map_to_kmaps'
 gem 'subjects_integration',       '0.3.9',        github: 'shanti-uva/subjects_integration', tag: 'v0.3.9' #path: '../../shanti/engines/subjects_integration'
-gem 'terms_engine',               '2.2.1',        github: 'shanti-uva/terms_engine',         tag: 'v2.2.1' #path: '../../shanti/engines/terms_engine'
+gem 'terms_engine',               '2.2.2',        github: 'shanti-uva/terms_engine',         tag: 'v2.2.2' #path: '../../shanti/engines/terms_engine'
 gem 'terms_integration',          '0.1.1',        github: 'shanti-uva/terms_integration',    tag: 'v0.1.1' #path: '../../shanti/engines/terms_integration'
 gem 'universal_navigation',       '3.1.7',        github: 'thl/universal_navigation',        tag: 'v3.1.7' #path: '../../thl/engines/universal_navigation'
 
@@ -79,10 +79,10 @@ gem 'actionpack-page_caching'
 #gem 'actionpack-action_caching'
 gem 'actionpack-action_caching', github: 'rails/actionpack-action_caching'
 
-group :development, :test do
+#group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem "debug", platforms: %i[ mri mingw x64_mingw ]
-end
+  #end
 
 group :development do
   # Access an interactive console on exception pages or by calling 'console' anywhere in the code.
